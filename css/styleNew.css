@@ -1,0 +1,792 @@
+body {
+    margin:0;
+    padding:0;
+    height:10000px;
+}
+
+:root {
+    --branch-color--:rgba(0, 0, 0, 0.05);
+    --active-color--:#28a745;
+    --link-color--:#fbd341;
+    --font-family--:"Poppins", Arial, sans-serif;
+}
+ 
+.header {
+    width:95%;
+    height:124px;
+    margin:auto;
+    /* background-color:red; */
+}
+ 
+.header .icons {
+    /* background-color:green; */
+    display:inline-block;
+    padding:20px 60px;
+}
+
+.header .icons span {
+background-color:var(--branch-color--);
+padding:20px;
+border-radius:50%;
+cursor: pointer;
+}
+
+.header .icons span:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.header .text {
+    /* background-color: blue; */
+    padding:10px 20px;
+    
+    
+}
+
+.header .text h2 {
+    font-weight:900;
+    font-family:var(--font-family--);
+    font-size:30px;
+    margin:0;
+    
+}
+
+.header .text h2 span {
+    color: var(--active-color--);
+}
+
+/* .header .search {
+    background-color: var(--branch-color--);
+} */
+
+.header .search input {
+    padding:15px 40px;
+    border-radius:20px;
+    background-color: var(--branch-color--);
+    border:none;
+    position: relative;
+}
+
+.header .search input::placeholder {
+    position: absolute;
+    left:20px;
+    color:rgb(91, 89, 89);
+}
+
+.header .search span {
+    padding:16px;
+    border-radius:50%;
+    background-color: #28a745;
+    color: white;
+    margin-left:-50px;
+}
+
+.pos {
+    float: left;
+    margin-top:30px;
+    margin-left:70px;
+}
+
+/* ________________________________________________________________ */
+
+.navbar {
+    width:100%;
+    height:80px;
+    background-color:var(--active-color--);
+
+}
+
+.navbar ul {
+    list-style:none;
+    text-align: center;
+    /* background-color: red; */
+}
+
+.navbar ul li {
+    display:inline-block;
+    padding:30px;
+    /* background-color:blue; */
+    position: relative;
+    
+}
+
+.navbar ul li a {
+    text-decoration:none;
+    color:white;
+    font-family:var(--font-family--);
+    font-weight:700;
+    /* background-color: aqua; */
+    
+}
+
+.navbar ul li .active {
+    color: var(--link-color--);
+}
+
+.navbar ul li a::after {
+   position: absolute;
+   content:"";
+   /* width:100%; */
+   width:0;
+   height:4px;
+   background-color:var(--link-color--);
+   bottom:0;
+   left:0;
+   /* display:block; */
+   transition:1s ;
+   
+}
+
+.navbar ul li a:hover::after {
+    width:100%;
+}
+
+.navbar ul li a:hover {
+    color: var(--link-color--);
+}
+
+/* _____________________________________________ */
+
+.landing {
+width:100%;
+height:400px;
+/* background-color: #fbd341; */
+overflow: hidden;
+background-image:url(https://preview.colorlib.com/theme/lawncare/images/bg_1.jpg.webp);
+background-attachment: fixed;
+background-size:cover;
+background-repeat: no-repeat;
+position:relative;
+}
+
+.landing::before {
+    position: absolute;
+    content:"";
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background-color:rgba(0, 0, 0, 0.379);
+}
+
+.landing .text {
+  position: absolute;
+  /* background-color: aqua; */
+  width:35%;
+  height:300px;
+  top:15%;
+  left:80px;
+
+
+}
+
+.landing .text h4 {
+font-family:var(--font-family--);
+font-weight:700;
+color:var(--link-color--);
+}
+
+.landing .text h2 {
+font-family:var(--font-family--);
+font-size:60px;
+margin:0;
+color:white;
+}
+
+.landing .text p {
+font-family:var(--font-family--);
+font-weight:700;
+color:gray;
+}
+
+.landing .text button {
+padding:10px 20px ;
+border-radius:6px;
+border:none;
+background-color: var(--active-color--);
+color: white;
+font-family:var(--font-family--);
+font-weight:700;
+}
+
+/* __________________________________________________ */
+
+.services {
+    position: relative;
+    width:100%;
+    height:470px;
+    background-color:var(--branch-color--);
+    margin:auto;
+}
+
+.services .Content {
+    width:70%;
+    height:78%;
+    /* background-color: #fbd341; */
+    margin-left:40px;
+   padding-top:50px;
+
+     
+}
+
+.services .Content .service {
+    position: relative;
+    width:30%;
+    height:100%;
+    float:left;
+    margin-left:18px;
+    text-align: center; 
+    padding-top:15px;
+    background-color: white;
+    border-radius:5px;
+    
+}
+ 
+.services .Content .service span {
+    display: inline-block;
+    width:100px;
+    height:20px;
+    background-color:var(--branch-color--);
+    border-radius:50%;
+    padding:40px 0px;
+    font-size:25px;
+    transition:0.5s;
+
+}
+
+.services .Content .service:hover span{
+    background-color: var(--active-color--);
+    color:var(--link-color--);
+}
+
+/* .services .Content .service span i {
+   
+} */
+
+
+.services .Content .service h3 {
+    font-family:var(--font-family--);
+}
+
+.services .Content .service p{
+    color:grey;
+    /* background-color: red; */
+    width:140px;
+    padding:0px 65px;
+    font-family: var(--font-family--);
+}
+
+.services .Content .service .icon {
+    position: absolute;
+    display: inline-block;
+    background-color: var(--active-color--);
+    border-radius:50%;
+    width:30px;
+    height:30px;
+    padding:10px;
+    bottom:-40px;
+    left:40%;
+    color: white;
+    opacity:0;
+     
+
+}
+
+
+.services .Content .service:hover .icon {
+    bottom:-25px;
+    opacity:1;
+     color: white;
+}
+
+.services .text {
+    position: absolute;
+    width:20%;
+    height:70%;
+    float:right;
+    /* background-color: aqua; */
+    top:0;
+    right: 0;
+    padding:60px 35px;
+}
+
+.services .text span {
+    font-family: var(--font-family--);
+    color: var(--active-color--);
+    font-weight:600;
+}
+
+.services .text h2 {
+    font-size:25px;
+    font-weight:900;
+    font-family:var(--font-family--);
+    margin-bottom:40px;
+}
+
+.services .text p{
+    color: gray;
+    line-height:1.5;
+    margin-bottom:60px;
+}
+
+.services .text a {
+ background-color: var(--active-color--);
+ padding:15px 20px ;
+ text-decoration: none;
+ color:white;
+ font-family: var(--font-family--);
+ border-radius:4px;
+}
+
+
+/* ____________________________________________________ */
+
+.company {
+    width:100%;
+    height:600px;
+    background-color:rgb(237, 236, 236);
+}
+
+.company .content {
+    width:90%;
+    height:100%;
+    /* background-color: coral; */
+    margin: auto;
+}
+
+.company .content .image {
+    width:50%;
+    height:100%;
+    /* background-color: #fbd341; */
+    position: relative;
+    float:left;
+    
+}
+
+.company .content .image img {
+    width:100%;
+    height:100%;
+}
+
+.company .content .image span {
+     display:inline-block;
+     width:100px;
+     height:100px;
+    background-color:var(--active-color--);
+    border-radius:50%;
+    position: absolute;
+    right:-45px;
+    top:260px;
+    color: white;
+    font-size:25px;
+    text-align: center;
+    /* border:20px solid black; */
+}
+
+.company .content .image span i{
+margin-top:34px;
+}
+ 
+.company .content .text {
+    width:45%;
+    height:90%;
+    /* background-color: red; */
+    float:left;
+    padding-left:50px;
+    padding-top:60px;
+}
+
+.company .content .text span {
+    font-family:var(--font-family--);
+    color: var(--active-color--);
+    font-weight:900;
+    
+}
+
+.company .content .text h2 {
+    font-family:var(--font-family--);
+    font-weight:900;
+    /* background-color:red; */
+    width:400px;
+}
+
+.company .content .text p {
+    color:gray;
+}
+
+.company .content .text ul {
+    list-style:none;
+    /* background-color: #fbd341; */
+    padding:0;
+}
+
+.company .content .text ul li {
+    background-color:white;
+    padding:20px 6px;
+    margin-bottom:10px;
+    margin-right:60px;
+    border-radius:2px;
+    position: relative;
+    transition:0.5s;
+    box-shadow:2px 2px rgba(0, 0, 0, 0.038);
+}
+
+.company .content .text ul li a {
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.77);
+    font-family: var(--font-family--);
+    margin-left:10px;
+}
+
+.company .content .text ul li span {
+    display: inline-block;
+    padding:12px;
+    background-color:var(--active-color--);
+    border-radius:50%;
+    position: absolute;
+    right:-20px;
+    top:10px;
+    color:white;
+    text-align: center;
+
+
+}
+
+ 
+
+.company .content .text ul li:hover {
+    background-color:var(--active-color--);
+    color: white;
+}
+
+.company .content .text ul li:hover span {
+background-color: var(--link-color--);
+color: var(--active-color--);
+
+}
+
+/* ______________________________________________________ */
+
+
+.tips {
+    width:100%;
+    height:750px;
+    /* background-color:red; */
+   
+}
+
+.tips .text {
+    /* background-color: #fbd341; */
+    text-align: center;
+    padding-top:60px;
+    margin-bottom:30px;
+}
+
+.tips .text span {
+    color:var(--active-color--);
+    font-family: var(--font-family--);
+    font-weight:900;
+}
+
+.tips .text h2 {
+    font-weight:900;
+    font-family:var(--font-family--);  
+}
+
+.tips .seasons {
+    /* background-color:green; */
+    width:90%;
+    height:70%;
+    margin: auto;
+    padding:20px;
+}
+
+.tips .seasons .season {
+    width:30%;
+    height:100%;
+    float: left;
+    margin-left:30px;
+    text-align: center;
+     
+}
+
+.tips .seasons .season img {
+    width:100%;
+    height:60%;
+    border-radius:4px;
+}
+
+.tips .seasons .season h3 {
+    font-family:var(--font-family--);
+}
+
+.tips .seasons .season p {
+    color: gray;
+    font-family:var(--font-family--);
+    /* background-color:blue; */
+    width:250px;
+    margin:auto;
+}
+
+.tips ul {
+    list-style:none;
+    /* background-color: #fbd341; */
+    text-align: center;
+    width:fit-content;
+    margin: auto;
+    padding:0;
+}
+
+.tips ul li {
+    display: inline-block;
+    padding:5px;
+    background-color:gray;
+    border-radius:50%;
+    margin-right:3px;
+    position: relative;
+    border:2px solid rgb(89, 87, 87);
+}
+
+ /* _____________________________________________ */
+
+ .contact {
+    margin-top:60px;
+    width:100%;
+    height:200px;
+    background-color: var(--active-color--);
+ }
+
+ .contact .text {
+    width:60%;
+    float:left;
+    /* background-color: #fbd341; */
+    padding-top:20px;
+    padding-left:50px;
+ }
+
+ .contact .text h3 {
+    font-family:var(--font-family--);
+    font-weight:900;
+    font-size:30px;
+    color: white;
+ }
+
+ .contact .text p {
+    /* background-color: aqua; */
+    width:470px;
+    font-family: var(--font-family--);
+    color: white;
+    line-height:1.5;
+ }
+ .contact .number {
+    width:30%;
+    /* background-color: aqua; */
+    float:left;
+    text-align: center;
+    margin-left:20px;
+    font-size:40px;
+    padding:65px 0px;
+    font-weight:bold;
+    color:var(--link-color--);
+ 
+ }
+
+/* ________________________________________ */
+
+.clients {
+    width:100%;
+    height:660px;
+    background-color:var(--branch-color--);
+}
+
+.clients .text {
+    text-align: center;
+    padding-top:60px;
+    margin-bottom:30px;
+}
+
+.clients .text span {
+    font-family: var(--font-family--);
+    color: var(--active-color--);
+    font-weight:900;
+}
+
+.clients .text h2 {
+    font-weight:900;
+    font-family: var(--font-family--);
+}
+
+.clients .clients-folder {
+    width:90%;
+    height:50%;
+    /* background-color: blue; */
+    margin: auto;
+}
+
+.clients .clients-folder .client {
+    position: relative;
+    width:31%;
+    height:80%;
+    float: left;
+    /* background-color: brown; */
+    background-color:white;
+    margin-left:20px;
+    margin-top:30px;
+}
+
+.clients .clients-folder .client p{
+    font-family:var(--font-family--);
+    color:gray;
+    /* background-color: aqua; */
+    width:260px;
+    padding-left:20px;
+    line-height:1.8;
+}
+
+.clients .clients-folder .client .content {
+width:100%;
+height:40%;
+/* background-color: darkslateblue; */
+position: absolute;
+bottom:2;
+}
+
+.clients .clients-folder .client .content .pic {
+    width:30%;
+    height:100%;
+    float: left;
+    margin-left:20px;
+}
+
+.clients .clients-folder .client .content .pic img {
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+
+.clients .clients-folder .client .content .info {
+width:50%;
+height:100%;
+float:left;
+/* background-color: #fbd341; */
+margin-left:20px;
+}
+
+.clients .clients-folder .client .content .info h3 {
+    font-family: var(--font-family--);
+    font-weight:700;
+}
+
+.clients .clients-folder .client .content .info p{
+    font-family: var(--font-family--);
+    color: var(--active-color--);
+    padding-left:0;
+}
+
+.clients ul {
+    list-style:none;
+    /* background-color: #fbd341; */
+    text-align: center;
+    width:fit-content;
+    margin:auto;
+    padding:0;
+}
+
+.clients ul li {
+    width:10px;
+    height:10px;
+    background-color:gray;
+    border-radius:50%;
+    display: inline-block;
+    border:1px solid rgb(97, 96, 96) ;
+}
+
+
+/* __________________________________________________________ */
+.blog {
+    width:100%;
+    height:700px;
+    background-color: rgb(230, 227, 227);
+    overflow: hidden;
+}
+
+.blog .text {
+    /* background-color: #fbd341; */
+    text-align: center;
+    padding-top:60px;
+    margin-bottom:30px;
+}
+
+.blog .text span {
+    color:var(--active-color--);
+    font-family: var(--font-family--);
+    font-weight:900;
+}
+
+.blog .text h2 {
+    font-weight:900;
+    font-family:var(--font-family--);  
+}
+
+.blog .content {
+    width:90%;
+    height:100%;
+    margin:auto;
+    /* background-color:orange; */
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+}
+
+.blog .box {
+    width:31%;
+    height:60%;
+    background-color:rgba(255, 255, 255, 0.329);
+}
+
+.blog .box img {
+    width:100%;
+    height:50%;
+}
+
+.blog .box a {
+    text-decoration:none;
+    font-weight:700;
+    color:black;
+    transition:0.5s;
+    display: inline-block;
+    margin-top:10px;
+    
+    
+}
+
+.blog .box a:hover {
+    color:var(--active-color--);
+}
+
+.blog .box p {
+    color:gray;
+    margin-bottom:20px;
+    
+}
+
+.blog .box .read-button {
+    padding:10px 20px;
+    color:white;
+    font-weight:700;
+    background-color:var(--active-color--);
+    border-radius:2px;
+}
+
+.blog .box a,
+.blog .box p
+{
+    margin-left:10px;
+   
+}
+
+/* .blog .box .date {
+    background-color: #fbd341;
+    width: fit-content;
+} */

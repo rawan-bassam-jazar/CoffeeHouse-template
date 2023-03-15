@@ -1,0 +1,242 @@
+ 
+ /* body {
+    height:3000px;
+ }
+  */
+ 
+ .preloader {
+    background-color: white;
+    width:100%;
+    height:100%;
+    position:fixed;
+ }
+
+ .preloader .loader {
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color:white;
+    top:0;
+    left:0;
+
+}
+ 
+ .preloader .loader img {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    width:50%;
+
+ }
+
+
+
+ 
+ /* header >>nav */ 
+
+ .header {
+    width:98%;
+    height:650px;
+    background:linear-gradient(to right,#1f1c45 70%,#db341e 50%);
+    margin-left: auto;
+    overflow: hidden;
+ }
+
+ .header nav {
+    width:100%;
+    height:18%;
+    background-color:inherit;
+    
+ }
+
+ .header nav .content {
+    position: relative;
+    width:95%;
+    height:100%;
+    /* background-color: black; */
+    margin: auto;
+    display: flex;
+    
+ }
+
+ .header nav .content .logo {
+    width:15%;
+    height:100%;
+    /* background-color: antiquewhite; */
+    
+ }
+
+ .header nav .content .logo img {
+    width:100%;
+    height:100%;
+ }
+
+ .header nav .content .list {
+    width:70%;
+    height:100%;
+    /* background-color: green; */
+    padding:35px 0px;
+ }
+
+ .header nav .content .list a {
+     /* background-color: antiquewhite; */
+     padding:20px 10px ;
+     margin-left:42px;
+     text-decoration: none;
+     color: white;
+     font-weight: bold;
+     transition:1s;
+     
+ }
+
+ .header nav .content .list a.active ,
+ .header nav .content .list a:hover {
+    background-color: #db341e;
+ }
+
+ .header nav .content .list a.special:hover {
+    background-color: #1f1c45;
+ }
+
+ .header nav .content .contactlist {
+    position: absolute;
+    background:linear-gradient(to right,#3c2f2f 60%,#be9b7b);
+    top:100%;
+    right:0;
+    width:20%;
+    padding:10px 20px;
+    border-radius:6px;
+    display: none;
+    color:#fff4e6;
+ }
+
+ .header nav .content .contactlist .contact {
+    /* background-color:purple; */
+    display:flex;
+    margin:10px 0px;
+ }
+
+ .header nav .content .contactlist .contact p {
+    /* background-color: aqua; */
+    margin: 0px 10px;
+    font-weight: bold;
+ }
+
+ .header nav .content .icon {
+    position: absolute;
+    background-color:black;
+    right: 0;
+    top:50%;
+    transform: translate(0 ,-50%);
+    padding:20px ;
+    color: white;
+    border-radius:4px;
+   
+ }
+
+/* Header >> landing */
+
+.header .landing {
+    width:100%;
+    height:82%;
+    /* background-color: lime; */
+    display: flex;
+     
+}
+
+.header .landing .text {
+    width:50%;
+    height:100%;
+    /* background-color:yellow; */
+    position: relative;
+    color: white;
+    
+}
+
+.header .landing .text h2 {
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    /* font-size:40px; */
+    width:50%;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+     
+}
+
+.header .landing .text h2::before {
+    position: absolute;
+    content:"";
+    background-color: black;
+    width:100%;
+    height:5px;
+    bottom:-20px;
+    left:0;
+     
+}
+
+.header .landing .text h2::after{
+    position: absolute;
+    content:"";
+    background-color: black;
+    width:100%;
+    height:5px;
+    top:-20px;
+    left: 0;
+     
+}
+
+.header .landing .image{
+    width:50%;
+    height:100%;
+    /* background-color: aqua; */
+}
+
+.header .landing .image img {
+    width:80%;
+    margin-left:-10%;
+}
+
+
+@media all and (max-width:767px) {
+    .header {
+        background: #3c2f2f;
+    }
+    
+    .header nav .content .logo {
+        width:20%;
+    }
+ 
+    .header nav .content .list a {
+        /* background-color: aqua; */
+        padding:10px 2px;
+        margin-left:10px;
+    }
+
+    .header nav .content .icon {
+        padding:15px;
+    }
+
+    .header nav .content .contactlist {
+        width:30%;
+    }
+
+    .header .landing .text h2{
+        width:80%;
+    }
+
+
+    .header .landing .image img {
+        margin-top:100px;
+        margin-left:-5%;
+    }
+}
+
+@media all and(max-width:414px) {
+    .header nav .content .list{
+        display: none;
+    }
+}

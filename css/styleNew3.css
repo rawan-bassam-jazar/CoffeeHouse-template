@@ -1,0 +1,29 @@
+/* navber */
+body {
+    height:1000px;
+}
+nav .nav-item {
+    padding:0px 40px;
+}
+
+nav .nav-item:hover {
+  background-color:green;
+  border-radius:10px;
+}
+
+.star{
+    position: relative;
+}
+
+.star .left  {
+    width:20%;
+    height:10px;
+    
+    background-color: white;
+}
+
+.star .right  {
+    width:20%;
+    height:10px;
+    background-color: white;
+}
